@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface ListasService {
 
-    List<Integer> hallarNumeros (ListasRequest entrada);
+    List<String> hallarNumeros (ListasRequest entrada);
 
 }

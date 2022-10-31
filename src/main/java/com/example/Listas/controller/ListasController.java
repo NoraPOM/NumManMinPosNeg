@@ -19,7 +19,7 @@ public class ListasController {
         this.validarNumeros = x;
     }
     @PostMapping
-    public ResponseEntity<List<Integer>> solucionSerie(@RequestBody ListasRequest request){
+    public ResponseEntity<List<String>> solucionSerie(@RequestBody ListasRequest request){
         return ResponseEntity.ok(validarNumeros.hallarNumeros(request));
     }
 }

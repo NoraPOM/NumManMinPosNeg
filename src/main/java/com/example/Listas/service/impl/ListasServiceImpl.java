@@ -11,10 +11,10 @@ import java.util.List;
 public class ListasServiceImpl implements ListasService {
 
     @Override
-    public List<Integer> hallarNumeros(ListasRequest entrada) {
+    public List<String> hallarNumeros(ListasRequest entrada) {
 
         List<Integer> numeros = entrada.getListadonuneros();
-        List<Integer> devuelveLista = new ArrayList<>();
+        List<String> devuelveLista = new ArrayList<>();
 
         Integer num, max = 0, min = 9999999, suma=0, sumapos = 0, sumaneg = 0;
 
@@ -38,12 +38,11 @@ public class ListasServiceImpl implements ListasService {
             }
 
         }
-    //    devuelveLista.add(max);
-        devuelveLista.add(max);
-        devuelveLista.add(min);
-        devuelveLista.add(suma);
-        devuelveLista.add(sumapos);
-        devuelveLista.add(sumaneg);
+        devuelveLista.add(String.valueOf("Numero Mayor: " + max));
+        devuelveLista.add(String.valueOf("Numero Menor: " + min));
+        devuelveLista.add(String.valueOf("Suma Total: " + suma));
+        devuelveLista.add(String.valueOf("Suma Positivos: " + sumapos));
+        devuelveLista.add(String.valueOf("Suma Negativos: " + sumaneg));
         return devuelveLista;
     }
 }
