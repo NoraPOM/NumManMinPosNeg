@@ -13,6 +13,7 @@ public class ListasRequest {
         this.listadonuneros = listadonuneros;
     }
 
+
     public List<Integer> getListadonuneros() {
         return listadonuneros;
     }
