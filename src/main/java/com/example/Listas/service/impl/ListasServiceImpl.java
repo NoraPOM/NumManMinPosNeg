@@ -39,8 +39,8 @@ public class ListasServiceImpl implements ListasService {
             }
 
         }
-        devuelveLista.add(String.valueOf("Numero Mayor: " + max));
-        devuelveLista.add(String.valueOf("Numero Menor: " + min));
+        devuelveLista.add(String.valueOf("Número Mayor: " + max));
+        devuelveLista.add(String.valueOf("Número Menor: " + min));
         devuelveLista.add(String.valueOf("Suma Total: " + suma));
         devuelveLista.add(String.valueOf("Suma Positivos: " + sumapos));
         devuelveLista.add(String.valueOf("Suma Negativos: " + sumaneg));
