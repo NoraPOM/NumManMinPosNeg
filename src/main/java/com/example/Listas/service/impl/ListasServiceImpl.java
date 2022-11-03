@@ -13,16 +13,17 @@ public class ListasServiceImpl implements ListasService {
     @Override
     public List<String> hallarNumeros(ListasRequest entrada) {
 
-        List<Integer> numeros = entrada.getListadonuneros();
-        List<String> devuelveLista = new ArrayList<>();
+        List<Integer> numeros = entrada.getListadonuneros();//para mapear lo que se recibio en postman
 
-        Integer num, max = 0, min = 9999999, suma=0, sumapos = 0, sumaneg = 0;
+        List<String> devuelveLista = new ArrayList<>();//la vble donde voy a entregar el resultado
+
+        Integer max = 0, min = 9999999, suma=0, sumapos = 0, sumaneg = 0;
 
         for (int i = 0; i < numeros.size(); i++) {
 
             Integer numero = (numeros.get(i));
 
-            suma = numero + suma;
+            suma = numero + suma; //Aca hago la suma de todos los numeros recibidos
 
             if (numero > max) {
                 max = numero;
@@ -32,9 +33,9 @@ public class ListasServiceImpl implements ListasService {
                      }
 
             if (numero >= 0) {
-                sumapos = numero + sumapos;
+                sumapos = numero + sumapos; //Aca hago la suma de todos los numeros POSITIVOS recibidos
             } else {
-                sumaneg = numero + sumaneg;
+                sumaneg = numero + sumaneg; //Aca hago la suma de todos los numeros NEGATIVOS recibidos
             }
 
         }
